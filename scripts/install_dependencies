@@ -1,0 +1,5 @@
+#!/bin/bash
+yum update -y && yum install git docker -y && systemctl restart docker && systemctl enable docker
+      
+
+      
