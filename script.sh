@@ -17,7 +17,6 @@ echo "docker compose is destroying"
 sudo docker-compose down
 echo "Removing images from local system"
 docker rmi -f $(docker images -aq)
-fi
 }
 
 case ${operation} in
