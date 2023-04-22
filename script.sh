@@ -8,13 +8,13 @@ cd /home/ec2-user
 rm -rf ./bitcot
 git clone $repo
 cd ./bitcot
-sudo docker-compose build --no-cache && sudo docker-compose up -d 
+sudo docker compose build --no-cache && sudo docker compose up -d 
 }
 
 destroy () {
 cd /home/ec2-user/bitcot
 echo "docker compose is destroying"
-sudo docker-compose down
+sudo docker compose down
 echo "Removing images from local system"
 docker rmi -f $(docker images -aq)
 }
