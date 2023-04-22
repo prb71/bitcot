@@ -1,7 +1,5 @@
 #!/bin/bash
-sudo docker rm -f $(docker ps -a -q)
-sudo docker rmi -f $(docker images -q)
-
-# docker-compose down
-# docker rmi -f $(docker images -f "dangling=true" -q)
-      
+#!/bin/bash
+cd /home/ec2-user/bitcot
+chmod +x script.sh 
+./script.sh destroy
